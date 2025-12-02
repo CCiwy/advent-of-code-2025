@@ -1,2 +1,6 @@
-(test
- (name test_aoc_ocaml))
+(library
+ (name test)
+ (inline_tests)
+ (libraries base stdio ppx_expect.evaluator)
+ (preprocess (pps ppx_inline_test ppx_expect))
+)
